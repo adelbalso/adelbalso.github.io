@@ -1,3 +1,7 @@
+window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);
+
 $(function() {
 	$('#about').hide().fadeIn(600)
 	$('#work').hide()
@@ -31,8 +35,4 @@ $(function() {
 	  $('.navWork a, .navContact a, .navAbout a').removeClass("active")
 		$('#blog').fadeIn(600)
 	});
-});
-
-$(function() {
-    FastClick.attach(document.body);
 });
