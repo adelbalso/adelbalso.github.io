@@ -64,17 +64,30 @@ body {
 				width: 3em !important;
 				padding: 10px;
 				margin-bottom: 20px;
+        -webkit-transition: all 1.5s ;
+            -moz-transition: all 1.5s ;
+            -ms-transition: all 1.5s ;
+            -o-transition: all 1.5s ;
+            transition: all 1.5s ;
 
 				a {
 					color: #41413E;
 					text-decoration: none;
 					padding: .5em 1em;
-					.transition(.15s, ease-out);
+          -webkit-transition: all .15s;
+          -moz-transition: all .15s;
+          -ms-transition: all .15s;
+          -o-transition: all .15s;
+          transition: all .15s;
+          border: 0px solid #41413E;
 
 					&:hover, &:active, &:focus, &.active {
-						.transition(.15s, ease-out);
+						-webkit-transition: all .15s;
+            -moz-transition: all .15s;
+            -ms-transition: all .15s;
+            -o-transition: all .15s;
+            transition: all .15s;
 						border-left: 5px solid #41413E;
-						color: #41413E;
 					}
 				}
 			}
