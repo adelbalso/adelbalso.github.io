@@ -32,3 +32,7 @@ $(function() {
 		$('#blog').fadeIn(600)
 	});
 });
+
+$(function() {
+    FastClick.attach(document.body);
+});
