@@ -76,6 +76,7 @@ button {
   color: @jumbotron-color;
   padding: 12px 15px;
   font-size: 16px;
+  cursor: pointer;
   .rounded(@radius);
   .transition(.15s);
 
@@ -187,8 +188,6 @@ nav {
   button {
     font-size: 24px;
     font-weight: 600;
-    border: 2px solid @cta-color;
-    background-color: @cta-color;
   }
 }
 
@@ -302,6 +301,28 @@ section {
   .step-image {
     margin-top: @buffer*2;
     position: relative;
+
+    &.pickup-image {
+      svg {
+        height: 200px;
+        position: relative;
+
+        &.bag-image {
+          position: absolute;
+          bottom: 0;
+          right: 60px;
+          height: 90px;
+          transition: 1s bottom;
+        }
+      }
+
+      &:hover {
+        .bag-image {
+          transition: 1s bottom;
+          bottom: 30px;
+        }
+      }
+    }
   }
 
   .screenshot-container {
