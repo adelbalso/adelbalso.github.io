@@ -275,6 +275,36 @@ section {
     .step {
       width: 50%;
       padding: 0 @buffer*3;
+
+      &.step-one {
+        &:hover {
+          .step-number {
+            background-color: @primary-color;
+            color: white;
+            transition: .3s all;
+          }
+
+          img {
+            margin-top: -125px;
+            transition: 1s all;
+          }
+        }
+      }
+
+      &.step-two {
+        &:hover {
+          .step-number {
+            background-color: @primary-color;
+            color: white;
+            transition: .3s all;
+          }
+
+          .bag-image {
+            transition: 1s bottom;
+            bottom: 30px;
+          }
+        }
+      }
     }
 
     .step-number {
@@ -285,6 +315,7 @@ section {
       height: 35px;
       font-weight: 700;
       margin: 0 auto @buffer auto;
+      transition: 1s all;
     }
 
     .reason {
@@ -315,13 +346,6 @@ section {
           transition: 1s bottom;
         }
       }
-
-      &:hover {
-        .bag-image {
-          transition: 1s bottom;
-          bottom: 30px;
-        }
-      }
     }
   }
 
@@ -334,13 +358,6 @@ section {
     overflow: hidden;
     .rounded(15px);
     transform: rotate(-2deg);
-
-    &:hover {
-      img {
-        margin-top: -125px;
-        transition: 1s all;
-      }
-    }
 
     img {
       width: 100%;
