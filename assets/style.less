@@ -34,7 +34,7 @@
 
 body {
   background: #fafafa;
-  font-family: "Avenir Next", "helvetica neue", helvetica, arial, sans-serif;
+  font-family: "Avenir Next", "Hind", "helvetica neue", helvetica, arial, sans-serif;
   color: #555;
   vertical-align: baseline;
   font-weight: inherit;
@@ -69,7 +69,7 @@ h1 {
 // UI ELEMENTS
 
 button {
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", "Hind";
   border: none;
   background-color: darken(@primary-color, 10%);
   border: 2px solid darken(@primary-color, 10%);
@@ -92,7 +92,7 @@ button {
 }
 
 input {
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", "Hind";
   padding: 12px 15px;
   border: none;
   box-shadow: none;
@@ -135,11 +135,13 @@ li {
 nav {
   background-color: white;
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   right: 0;
   padding: 14px 40px 10px 40px;
   border-bottom: 1px solid #eee;
+  opacity: 0.95;
 
   .nav-menu {
     float: right;
@@ -196,7 +198,7 @@ nav {
   position: fixed;
   right: 0;
   left: 0;
-  top: 100px;
+  top: 103px;
   height: 600px;
   overflow: hidden;
   width: 100%;
@@ -332,6 +334,7 @@ section {
   .step-image {
     margin-top: @buffer*2;
     position: relative;
+    z-index: 0;
 
     &.pickup-image {
       svg {
