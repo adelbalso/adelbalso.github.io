@@ -1,0 +1,402 @@
+// IMPORTS
+
+@import "elements.less";
+
+// VARIABLES
+
+@primary-color: rgb(255, 197, 92);
+@jumbotron-color: #f8f2e3;
+@cta-color: rgb(255, 197, 92);
+
+@radius: 4px;
+@buffer: 20px;
+
+// MIXINS
+
+.clearfix {
+  zoom: 1;
+  
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  
+  &:after {
+    clear: both;
+  }
+}
+
+// STYLES
+
+* {
+  box-sizing: border-box; 
+}
+
+body {
+  background: #fafafa;
+  font-family: "Avenir Next", "Hind", "helvetica neue", helvetica, arial, sans-serif;
+  color: #555;
+  vertical-align: baseline;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 22px;
+  border: 0 none;
+  outline: 0;
+  padding: 0px;
+  margin: 0;
+}
+
+// TYPOGRAPHY
+
+a {
+  color: @primary-color;
+  text-decoration: none;
+  .transition(.15s);
+
+  &:hover {
+    .transition(.15s);
+  }
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.emphasis {
+  color: @cta-color;
+}
+
+// UI ELEMENTS
+
+button {
+  font-family: "Avenir Next", "Hind";
+  border: none;
+  background-color: darken(@primary-color, 10%);
+  border: 2px solid darken(@primary-color, 10%);
+  color: @jumbotron-color;
+  padding: 12px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  .rounded(@radius);
+  .transition(.15s);
+
+  &:hover {
+    background-color: @primary-color;
+    border: 2px solid @primary-color;
+    .transition(.15s);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input {
+  font-family: "Avenir Next", "Hind";
+  padding: 12px 15px;
+  border: none;
+  box-shadow: none;
+  .rounded(@radius);
+  font-size: 16px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  .transition(.15s);
+
+  &:focus {
+    border: 2px solid @primary-color;
+    outline: none;
+    .transition(.15s);
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+// TARGETED STYLES
+
+.logo, .logo-bonnie {
+  display: inline-block;
+
+  svg {
+    width: 260px;
+    height: 70px;
+
+    path {
+      fill: @primary-color;
+    }
+  }
+}
+
+.logo {
+  display: none;
+}
+
+nav {
+  background-color: white;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 14px 40px 10px 40px;
+  border-bottom: 1px solid #eee;
+  opacity: 0.95;
+
+  .nav-menu {
+    float: right;
+    color: @jumbotron-color;
+    list-style-type: none;
+
+    li {
+      display: inline;
+      margin-left: 30px;
+
+      a {
+        color: #aaa;
+        .rounded(@radius);
+        padding: 15px 40px;
+        border: 2px solid transparent;
+
+        &.link-emphasis {
+          border: 2px solid @cta-color;
+          color: @cta-color;
+        }
+
+        &:hover {
+          background-color: @cta-color;
+          color: #fff;
+          border: 2px solid @cta-color;
+        }
+      }
+    }
+  }
+}
+
+.call-to-action {
+  text-align: center;
+
+  input {
+    border: 2px solid transparent;
+    margin-right: @buffer;
+    font-size: 24px;
+    font-weight: 600;
+
+    &:focus {
+      border: 2px solid @cta-color;
+    }
+  }
+
+  button {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+.jumbotron {
+  z-index: -2;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 103px;
+  height: 600px;
+  overflow: hidden;
+  width: 100%;
+  // background-image: url('images/jumbotron_background.jpg');
+  // background-size: cover;
+
+  #pretzel-video {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .jumbotron-content {
+    padding: @buffer*2;
+  }
+
+  h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 130px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    color: #eee;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  .call-to-action {
+    input {
+      &:focus {
+        border: 2px solid #eee;
+        background-color: #eee;
+      }
+    }
+  }
+}
+
+.content {
+  background-color: white;
+  margin-top: 600px;
+}
+
+section {
+  &:nth-child(even) {
+    background-color: #f3f3f3;
+  }
+
+  .section-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: @buffer*4 0; 
+  }
+
+  h1 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .steps, .reasons {
+    margin: 0;
+    .clearfix;
+
+    .step, .reason {
+      margin-bottom: @buffer*2;
+      float: left;
+      text-align: center;
+    }
+
+    .step {
+      width: 50%;
+      padding: 0 @buffer*3;
+
+      &.step-one {
+        &:hover {
+          .step-number {
+            background-color: @primary-color;
+            color: white;
+            transition: .3s all;
+          }
+
+          img {
+            margin-top: -125px;
+            transition: 1s all;
+          }
+        }
+      }
+
+      &.step-two {
+        &:hover {
+          .step-number {
+            background-color: @primary-color;
+            color: white;
+            transition: .3s all;
+          }
+
+          .bag-image {
+            transition: 1s bottom;
+            bottom: 30px;
+          }
+        }
+      }
+    }
+
+    .step-number {
+      .rounded(100%);
+      background-color: #eee;
+      padding: 3px 10px;
+      width: 35px;
+      height: 35px;
+      font-weight: 700;
+      margin: 0 auto @buffer auto;
+      transition: 1s all;
+    }
+
+    .reason {
+      width: 33%;
+      padding: 0 @buffer*2;
+    }
+  }
+
+  .call-to-action {
+    text-align: center;
+    margin-bottom: @buffer*4;
+  }
+
+  .step-image {
+    margin-top: @buffer*2;
+    position: relative;
+    z-index: 0;
+
+    &.pickup-image {
+      svg {
+        height: 200px;
+        position: relative;
+
+        &.bag-image {
+          position: absolute;
+          bottom: 0;
+          right: 60px;
+          height: 90px;
+          transition: 1s bottom;
+        }
+      }
+    }
+  }
+
+  .screenshot-container {
+    position: absolute;
+    top: 21px;
+    left: 51px;
+    width: 244px;
+    height: 135px;
+    overflow: hidden;
+    .rounded(15px);
+    transform: rotate(-2deg);
+
+    img {
+      width: 100%;
+      margin-top: 0px;
+      transition: 2s all;
+    }
+  }
+
+  &#sign-up {
+    background-image: url('../assets/images/bottom_cta_bg.jpg');
+    background-size: cover;
+    background-position-y: -250px;
+    height: 600px;
+
+    h1 {
+      color: @jumbotron-color;
+      font-size: 48px;
+      // margin-top: 100px;
+      // margin-bottom: 100px;
+    }
+
+    input, button {
+      font-size: 38px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
