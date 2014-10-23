@@ -51,6 +51,8 @@ body {
 a {
   color: @primary-color;
   text-decoration: none;
+  font-weight: 600;
+
   .transition(.15s);
 
   &:hover {
@@ -360,7 +362,7 @@ section {
     height: 135px;
     overflow: hidden;
     .rounded(15px);
-    transform: rotate(-2deg);
+    .rotation(-2deg);
 
     img {
       width: 100%;
@@ -369,10 +371,44 @@ section {
     }
   }
 
+  &#testimonial {
+    .producer-image {
+      width: 30%;
+      display: inline-block;
+
+      img {
+        .rounded(100%);
+        height: 230px;
+        width: 230px;
+      }
+    }
+
+    .pull-quote {
+      width: 68%;
+      display: inline-block;
+    }
+
+    .quotations {
+      svg {
+        height: 100px;
+        width: 100px;
+
+        path {
+          fill: #aaa;
+        }
+      }
+    }
+
+    .quote {
+      font-size: 40px;
+      margin-bottom: @buffer;
+    }
+  }
+
   &#sign-up {
     background-image: url('../homepage_assets/images/bottom_cta_bg.jpg');
     background-size: cover;
-    background-position-y: -250px;
+    background-position: center center;
     height: 600px;
 
     h1 {
