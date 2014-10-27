@@ -196,6 +196,23 @@ nav {
   }
 }
 
+.get-started {
+  text-align: center;
+  position: fixed;
+  height: 500px;
+  top: -500px;
+  left: 0;
+  right: 0;
+  padding-top: 100px;
+  background-color: #eee;
+  .transition(.3s);
+
+  &.open {
+    top: 100px;
+    .transition(.3s);
+  }
+}
+
 .jumbotron {
   z-index: -2;
   position: fixed;

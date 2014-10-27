@@ -191,9 +191,19 @@
       <ul class="nav-menu">
         <li class="nav-menu-item"><a href="#" class="nav-menu-item">About</a></li>
         <li class="nav-menu-item"><a href="#" class="nav-menu-item">Log In</a></li>
-        <li class="nav-menu-item link-emphasis"><a href="#" class="nav-menu-item link-emphasis">Get Started</a></li>
+        <li class="nav-menu-item link-emphasis"><a href="#" id="get-started-button" class="nav-menu-item link-emphasis">Get Started</a></li>
       </ul>
     </nav>
+
+    <div class="get-started">
+      <h1>Start eating local food!</h1>
+      <h2>Let's start by finding the closest pickup site to you.</h2>
+      <div class="call-to-action">
+        <input type="text" placeholder="Enter zip code">
+        <button class="zip-button">Order now</button>
+      </div>
+    </div>
+
     <div class="jumbotron">
       <video loop="loop" preload="auto" autoplay="true" id="pretzel-video" class="video-playing">
         <source src="homepage_assets/images/video.mp4" type="video/mp4">
@@ -721,7 +731,15 @@ c56.929,0,94.387,41.185,94.387,85.41C363.886,280.115,331.369,323.808,283.441,323
   </footer>
 </html>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+<script type="text/javascript">
+
+  $('#get-started-button').click(function() {
+    $('.get-started').toggleClass('open');
+  })
+
+</script>
 
 
 
