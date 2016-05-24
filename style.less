@@ -21,7 +21,8 @@ body {
 	}
 
 	h1 {
-		font-size: 70px;
+		font-size: 50px;
+		line-height: 1.4;
 		font-weight: 300;
 
 		&.workSectionTitle {
@@ -137,18 +138,15 @@ body {
 	.container {
 		margin-left: 150px;
 
-		.projectLinks a {
-			display: block;
-			margin: 1.4em 0;
-		}
-
 		.projectNavSection {
 			display: inline-block;
 	    vertical-align: top;
 	    margin-right: 70px;
 
 	    a {
-	    	display: block;
+	    	float: left;
+	    	clear: left;
+	    	margin-bottom: 20px;
 	    }
 		}
 
@@ -173,8 +171,21 @@ body {
           }
         }
 
-				img.me {
-					position: fixed;
+        .me {
+        	position: relative;
+        	margin-top: 200px;
+        }
+
+        .hidden {
+        	height: 5px;
+        	border-top: 1px solid #888;
+        	background-color: white;
+        	position: relative;
+        	z-index: 100;
+        }
+
+				img.meImg {
+					position: absolute;
 					bottom: 0;
 					right: 5%;
 					width: 15%;
@@ -184,6 +195,7 @@ body {
 					-ms-transition: all .15s ;
 					-o-transition: all .15s ;
 					transition: all .15s ;
+					z-index: 10;
 
 					&:hover {
 						bottom: -0.2em;
@@ -193,6 +205,46 @@ body {
 						-o-transition: all .15s ;
 						transition: all .15s ;
 					}
+				}
+			}
+
+			.skills {
+				.row {
+					overflow: auto;
+  				zoom: 1;
+					display: block;
+				}
+				.skill {
+					margin: 30px 10px;
+					width: 40%;
+					float: left;
+
+					&:hover h2, &:hover p {
+						padding-left: 22px;
+						-webkit-transition: padding-left .15s ;
+						-moz-transition: padding-left .15s ;
+						-ms-transition: padding-left .15s ;
+						-o-transition: padding-left .15s ;
+						transition: padding-left .15s ;
+					}
+				}
+				h2 {
+					border-left: 1px solid #888;
+					padding-left: 20px;
+					-webkit-transition: padding-left .15s ;
+					-moz-transition: padding-left .15s ;
+					-ms-transition: padding-left .15s ;
+					-o-transition: padding-left .15s ;
+					transition: padding-left .15s ;
+				}
+
+				p {
+					padding-left: 20px;
+					-webkit-transition: padding-left .15s ;
+					-moz-transition: padding-left .15s ;
+					-ms-transition: padding-left .15s ;
+					-o-transition: padding-left .15s ;
+					transition: padding-left .15s ;
 				}
 			}
 
@@ -235,9 +287,6 @@ body {
 					li {
 						// display: inline;
 						margin: 1.4em 0;
-						a {
-							padding: 1em;
-						}
 					}
 				}
 			}
