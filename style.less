@@ -52,11 +52,34 @@ body {
 		// background: #B5DBCE;
 		box-sizing: border-box;
 
+		.logo {
+			height: 185px;
+			width: 150px;
+			overflow: hidden;
+
+			&:hover {
+				p {
+		    	font-size: 32px;
+			    padding: 14px 14px 7px 14px;
+			    margin-top: 0;
+			    margin-left: 0;
+			    line-height: 1.3;
+			    transform: rotate(0deg);
+			    transition: all .5s;
+		    }
+		  }
+		}
+
 		.logo p {
-			font-size: 32px;
+	    transition: all .5s;
+	    font-size: 93px;
 	    padding: 14px 14px 7px 14px;
-	    margin-top: 0;
-	    line-height: 1.3;
+	    margin-top: -11px;
+	    margin-left: -54px;
+	    line-height: 0.4;
+	    transform: rotate(45deg);
+	    color: blue;
+
       // background-image: url(images/adb_dark.svg);
       // background-size: 100%;
       // background-repeat: no-repeat;
@@ -173,7 +196,7 @@ body {
 
         .me {
         	position: relative;
-        	margin-top: 200px;
+        	margin-top: 250px;
         }
 
         .hidden {
@@ -332,12 +355,23 @@ body {
 			.logo {
 				margin: 0;
         width: 100%;
-
+        height: auto;
 
         p {
         	font-size: 26px;
         	margin-bottom: 0;
+        	margin-left: 0;
+        	margin-top: 0;
         	text-align: center;
+        	transform: rotate(0deg);
+        	line-height: 2;
+        	pointer-events: none;
+
+        	&:hover {
+        		font-size: 26px;
+        		margin: 10px;
+        		padding: 0;
+        	}
         }
 
 				// &:hover {
