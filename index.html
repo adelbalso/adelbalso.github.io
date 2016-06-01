@@ -20,9 +20,9 @@
    <p>Adrian Del Balso's Portfolio</p> 
   </div>
 	<ul>
-		<li class="navAbout"><a href="#about" class="active">about</a></li>
-		<li class="navWork"><a href="#work">work</a></li>
-		<li class="navContact"><a href="#contact">contact</a></li>
+		<li class="navAbout"><a href="#about" class="active">About</a></li>
+		<li class="navWork"><a href="#work">Work</a></li>
+		<li class="navContact"><a href="#contact">Contact</a></li>
 		<!-- <li class="navBlog"><a href="#blog">blog</a></li> -->
 	</ul>
 <!-- 	<div class="subnav">
@@ -46,40 +46,43 @@
 
     <h1 class="workSectionTitle">What I do</h1>
 
-    <div class="skills">
+    <div class="skills summarySection">
       <div class="row">
-        <div class="skill">
+        <div class="skill summaryItem">
       		<h2>Product strategy</h2>
-          <p>Working with customers and stakeholders to define the problem and opportunity landscape.</p>
+          <p class="summaryText">Working with customers and stakeholders to define the problem and opportunity landscape.</p>
         </div>
 
-        <div class="skill">
-          <h2>User research</h2>
-          <p>User testing, surveying, data analysis, competitor analysis, etc.</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="skill">
+        <div class="skill summaryItem">
           <h2>Wireframes and prototypes</h2>
-          <p>Defining concepts and bringing them to life quickly for validation.</p>
+          <p class="summaryText">Defining concepts and bringing them to life quickly for validation.</p>
         </div>
 
-        <div class="skill">
-          <h2>Information architecture</h2>
-          <p>Making sense of complex digital systems.</p>
+      </div>
+
+      <div class="row">
+        <div class="skill summaryItem">
+          <h2>Interface design</h2>
+          <p class="summaryText">Creating beautiful, seamless and effective interfaces.</p>
+        </div>
+
+        <div class="skill summaryItem">
+          <h2>Frontend Development</h2>
+          <p class="summaryText">HTML, CSS, and just enough javascript to keep the trains moving.</p>
         </div>
       </div>
 
       <div class="row">
-        <div class="skill">
-          <h2>Interface design</h2>
-          <p>Creating beautiful, seamless and effective interfaces.</p>
+        <div class="skill summaryItem">
+          <h2>User research</h2>
+          <p class="summaryText">User testing, surveying, data analysis, competitor analysis, etc.</p>
         </div>
 
-        <div class="skill">
+        
+
+        <div class="skill summaryItem">
           <h2>Team management</h2>
-          <p>Building and empowering amazing design teams.</p>
+          <p class="summaryText">Building and empowering amazing design teams.</p>
         </div>
       </div>
     
@@ -94,38 +97,38 @@
 	</section>
 
 	<section id="work">
-		<h1 class="workSectionTitle">These are some of my designs</h1>
-    <div class="projectLinks">
-      <div class="projectNavSection">
+		<h1 class="workSectionTitle">Here is some of my work</h1>
+    <div class="projectLinks summarySection">
+      <div class="projectNavSection summaryItem">
         <h2>Core experience</h2>
-        <a href="#farmigo">Farmigo</a>
-        <a href="#amicus">Amicus</a>
-        <a href="#patronhood">Patronhood</a>
+        <a href="#farmigo" class="summaryText">Farmigo</a>
+        <a href="#amicus" class="summaryText">Amicus</a>
+        <a href="#patronhood" class="summaryText">Patronhood</a>
       </div>
 
-      <div class="projectNavSection">
+      <div class="projectNavSection summaryItem">
         <h2>Side projects</h2>
-        <a href="#beanstalk">Beanstalk</a>
-        <a href="#luster">Luster</a>
-        <a href="#voyage">Voyage</a>
-        <a href="#yumbin">Yumbin</a>
-        <a href="#grapple">Grapple</a>
-        <a href="#landmarker">Landmarker</a>
+        <a href="#beanstalk" class="summaryText">Beanstalk</a>
+        <a href="#luster" class="summaryText">Luster</a>
+        <a href="#voyage" class="summaryText">Voyage</a>
+        <a href="#yumbin" class="summaryText">Yumbin</a>
+        <a href="#grapple" class="summaryText">Grapple</a>
+        <a href="#landmarker" class="summaryText">Landmarker</a>
       </div>
 
-      <div class="projectNavSection">
+      <div class="projectNavSection summaryItem">
         <h2>Interactions</h2>
-        <a href="#flyaway">Flyaway Send Button</a>
-        <a href="#reductiveNav">Reductive Nav</a>
-        <!-- <a href="#embeddedPhoto">Inline Attachment Preview</a> -->
+        <a href="#flyaway" class="summaryText">Flyaway Send Button</a>
+        <a href="#reductiveNav" class="summaryText">Reductive Nav</a>
+        <!-- <a href="#embeddedPhoto" class="summaryText">Inline Attachment Preview</a> -->
       </div>
 
-      <div class="projectNavSection">
+      <div class="projectNavSection summaryItem">
         <h2>Graphic</h2>
-        <a href="#allGrooves">All Grooves</a>
-        <a href="#parkNLot">Park n' Lot</a>
-        <a href="#sebastian">Sebastian</a>
-        <a href="#gasWorks">Gas Works</a>
+        <a href="#allGrooves" class="summaryText">All Grooves</a>
+        <a href="#parkNLot" class="summaryText">Park n' Lot</a>
+        <a href="#sebastian" class="summaryText">Sebastian</a>
+        <a href="#gasWorks" class="summaryText">Gas Works</a>
       </div>
 
     </div>
@@ -137,7 +140,7 @@
         <p>I am currently the Director of Design at Farmigo.</p>
         <p>Our mission is to create a food system that’s better for everyone, from farmers to eaters. As a grocery service, the design team's challenge is to create a beautiful food experience that is enabled by the digital product.</p>
         <div class="imgWrapper">
-          <iframe src="http://www.farmigo.com/" frameborder="0"></iframe>
+          <video class="share-video" id="share-video" poster="https://thumbs.gfycat.com/ThoroughOldHousefly-poster.jpg" autoplay="" muted="" loop=""><source id="webmSource" src="https://zippy.gfycat.com/ThoroughOldHousefly.webm" type="video/webm"><source id="mp4Source" src="https://giant.gfycat.com/ThoroughOldHousefly.mp4" type="video/mp4"><img title="Sorry, your browser doesn't support HTML5 video." src="https://thumbs.gfycat.com/ThoroughOldHousefly-poster.jpg"></video>
         </div>
       </div>
 

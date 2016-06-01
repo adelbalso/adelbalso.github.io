@@ -254,15 +254,28 @@ body {
 					width: 40%;
 					float: left;
 
-					&:hover h2, &:hover p {
+					&:hover h2 {
 						padding-left: 22px;
 						-webkit-transition: padding-left .15s ;
 						-moz-transition: padding-left .15s ;
 						-ms-transition: padding-left .15s ;
 						-o-transition: padding-left .15s ;
 						transition: padding-left .15s ;
+					} 
+
+					&:hover .summaryText {
+						margin-left: 22px;
+						-webkit-transition: margin-left .15s ;
+						-moz-transition: margin-left .15s ;
+						-ms-transition: margin-left .15s ;
+						-o-transition: margin-left .15s ;
+						transition: margin-left .15s ;
 					}
 				}
+				
+			}
+
+			.summarySection {
 				h2 {
 					border-left: 1px solid #888;
 					padding-left: 20px;
@@ -273,13 +286,15 @@ body {
 					transition: padding-left .15s ;
 				}
 
-				p {
-					padding-left: 20px;
-					-webkit-transition: padding-left .15s ;
-					-moz-transition: padding-left .15s ;
-					-ms-transition: padding-left .15s ;
-					-o-transition: padding-left .15s ;
-					transition: padding-left .15s ;
+				.summaryItem {
+					.summaryText {
+						margin-left: 20px;
+						-webkit-transition: margin-left .15s ;
+						-moz-transition: margin-left .15s ;
+						-ms-transition: margin-left .15s ;
+						-o-transition: margin-left .15s ;
+						transition: margin-left .15s ;
+					}
 				}
 			}
 
