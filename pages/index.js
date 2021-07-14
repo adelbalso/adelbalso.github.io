@@ -67,11 +67,11 @@ const Homepage = () => {
     <>
       <Head>
         <title>ADB</title>
-        <meta name="title" content="Adrian Del Balso dot com" />
-        <meta property="og:site_name" content="Adrian Del Balso dot com" key="og_lu_site_name" />
+        <meta name="title" content="adrian del balso dot com" />
+        <meta property="og:site_name" content="adrian del balso dot com" key="og_lu_site_name" />
         <meta name="description" content="Hey" />
         <meta name="keywords" content="I like to build things" />
-        <meta property="og:title" content="Adrian Del Balso dot com" key="og_lu_site_title" />
+        <meta property="og:title" content="adrian del balso dot com" key="og_lu_site_title" />
         <meta property="og:description" content="I like to build things" key="og_lu_site_description" />
         <meta property="og:image" content={heroBgImg} key="og_lu_site_image" />
       </Head>
