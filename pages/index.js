@@ -61,7 +61,7 @@ const Text = styled.div`
 `
 
 const Homepage = () => {
-  const heroBgImg = 'https://images.unsplash.com/photo-1528370400454-2c647503cd53?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80'
+  const heroBgImg = 'https://s3.amazonaws.com/adriandelbalso.com/assets/og-img.png'
 
   return (
     <>
@@ -70,9 +70,9 @@ const Homepage = () => {
         <meta name="title" content="Adrian Del Balso dot com" />
         <meta property="og:site_name" content="Adrian Del Balso dot com" key="og_lu_site_name" />
         <meta name="description" content="Hey" />
-        <meta name="keywords" content="I like to make shit." />
+        <meta name="keywords" content="I like to build things" />
         <meta property="og:title" content="Adrian Del Balso dot com" key="og_lu_site_title" />
-        <meta property="og:description" content="I like to make shit." key="og_lu_site_description" />
+        <meta property="og:description" content="I like to build things" key="og_lu_site_description" />
         <meta property="og:image" content={heroBgImg} key="og_lu_site_image" />
       </Head>
 
