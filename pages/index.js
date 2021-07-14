@@ -3,6 +3,17 @@ import styled, { keyframes } from 'styled-components'
 import AnimMultiline from '../components/ui/animations/AnimMultiline'
 import Grid from '../components/ui/Grid'
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+`
+
 const rotate = keyframes`
   0% {
     transform: scale(1.2) rotate(0deg);
@@ -60,6 +71,10 @@ const Text = styled.div`
   }
 `
 
+const FadeIn = styled.div`
+  animation: ${fadeIn} .9s cubic-bezier(.69,-0.25,.55,1.47);
+`
+
 const Homepage = () => {
   const heroBgImg = 'https://s3.amazonaws.com/adriandelbalso.com/assets/og-img.png'
 
@@ -84,13 +99,19 @@ const Homepage = () => {
 
       <Content>
         <div>
-          <Headline><AnimMultiline str="Tfw you're trying to pick a font." /></Headline>
-          <Grid mt={2} style={{ maxWidth: 400 }}>
-            <Text secondary>Hi! That's my name. I like to build things. I'm currently building <a href="https://www.littleuniverse.com/" target="_blank">Little Universe</a>. Before that, I worked on <a href="https://www.strivedigital.org/" target="_blank">Strive Digital</a>, <a href="https://angel.co/company/pilotworks" target="_blank">Pilotworks</a>, <a href="https://www.farmigo.com/" target="_blank">Farmigo</a>, and <a href="https://angel.co/company/amicus" target="_blank">Amicus</a>.</Text>
-          </Grid>
-          <Grid mt={2} style={{ maxWidth: 400 }}>
-            <Text secondary>Want to build something together? <a href="mailto:a.delbalso@gmail.com">Say hello!</a></Text>
-          </Grid>
+          <FadeIn>
+            <Headline><AnimMultiline str="Tfw you're trying to pick a font." /></Headline>
+          </FadeIn>
+          <FadeIn>
+            <Grid mt={2} style={{ maxWidth: 400 }}>
+              <Text secondary>Hi! That's my name. I like to build things. I'm currently building <a href="https://www.littleuniverse.com/" target="_blank">Little Universe</a>. Before that, I worked on <a href="https://www.strivedigital.org/" target="_blank">Strive Digital</a>, <a href="https://angel.co/company/pilotworks" target="_blank">Pilotworks</a>, <a href="https://www.farmigo.com/" target="_blank">Farmigo</a>, and <a href="https://angel.co/company/amicus" target="_blank">Amicus</a>.</Text>
+            </Grid>
+          </FadeIn>
+          <FadeIn>
+            <Grid mt={2} style={{ maxWidth: 400 }}>
+              <Text secondary>Want to build something together? <a href="mailto:a.delbalso@gmail.com">Say hello!</a></Text>
+            </Grid>
+          </FadeIn>
         </div>
       </Content>
     </>
