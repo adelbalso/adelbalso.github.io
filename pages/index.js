@@ -24,6 +24,9 @@ const VideoContainer = styled.div`
   right: 0;
   /* opacity: .1; */
   animation: ${rotate} 100s linear infinite;
+  @media only screen and (max-width: 600px) {
+    bottom: 50%;
+  }
 `
 
 const Video = styled.video`
@@ -74,7 +77,7 @@ const Homepage = () => {
       </Head>
 
       <VideoContainer>
-        <Video autoPlay muted loop id="myVideo">
+        <Video autoPlay playsInline muted loop id="myVideo">
           <source src="/assets/images/bg-adb.mp4" type="video/mp4" />
         </Video>
       </VideoContainer>
