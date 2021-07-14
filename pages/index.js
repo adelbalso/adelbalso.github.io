@@ -83,7 +83,7 @@ const Homepage = () => {
         <div>
           <Headline><AnimMultiline str="Tfw you're trying to pick a font." /></Headline>
           <Grid mt={2} style={{ maxWidth: 400 }}>
-            <Text secondary>Hi! That's my name. I like to build things. I'm currently building <a href="https://www.littleuniverse.com/.com" target="_blank">Little Universe</a>. Before that, I worked on <a href="strivedigital.org">Strive Digital</a>, <a href="https://angel.co/company/pilotworks">Pilotworks</a>, <a href="https://www.farmigo.com/">Farmigo</a>, and <a href="https://angel.co/company/amicus">Amicus</a>.</Text>
+            <Text secondary>Hi! That's my name. I like to build things. I'm currently building <a href="https://www.littleuniverse.com/" target="_blank">Little Universe</a>. Before that, I worked on <a href="https://www.strivedigital.org/" target="_blank">Strive Digital</a>, <a href="https://angel.co/company/pilotworks" target="_blank">Pilotworks</a>, <a href="https://www.farmigo.com/" target="_blank">Farmigo</a>, and <a href="https://angel.co/company/amicus" target="_blank">Amicus</a>.</Text>
           </Grid>
           <Grid mt={2} style={{ maxWidth: 400 }}>
             <Text secondary>Want to build something together? <a href="mailto:a.delbalso@gmail.com">Say hello!</a></Text>

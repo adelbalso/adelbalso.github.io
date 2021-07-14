@@ -23,24 +23,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=UA-133769605-1`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-133769605-1', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-          />
-
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
           <link href="/assets/fonts/fonts.css" rel="stylesheet"/>
           {/* Step 5: Output the styles in the head  */}
